@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { checkName, registerUser } from "../../../_actions/user_action";
+import { checkEmail, registerUser } from "../../../_actions/user_action";
 import styled from "styled-components";
 import Auth from "../../../hoc/auth";
 import axios from "axios";
@@ -135,12 +135,12 @@ function RegisterPage() {
     setConfirmPW(e.target.value);
   };
 
-  const onCheckName = async () => {
-    dispatch(checkName({ name: Name })).then((res) => {
+  const onCheckEmail = async () => {
+    dispatch(checkEmail({ email: Email })).then((res) => {
       if (res.payload.success) {
-        alert("사용가능한 닉네임입니다.");
+        alert("사용가능한 이메일입니다.");
       } else {
-        alert("이미 존재하는 닉네임입니다.");
+        alert("이미 존재하는 이메일입니다.");
       }
     });
   };
@@ -179,19 +179,20 @@ function RegisterPage() {
       <Register_page_container onSubmit={onSubmitHandler}>
         <Register_text>Register</Register_text>
         <Register_form_container>
+        <Input_Email
+            type="email"
+            value={Email}
+            onChange={onChangeEmail}
+            placeholder="이메일"
+          />
+          <NameCheckBtn onClick={onCheckEmail}>이메일 중복 확인</NameCheckBtn>
           <Input_Name
             type="text"
             value={Name}
             onChange={onChangeName}
             placeholder="이름"
           />
-          <NameCheckBtn onClick={onCheckName}>이름 중복 확인</NameCheckBtn>
-          <Input_Email
-            type="email"
-            value={Email}
-            onChange={onChangeEmail}
-            placeholder="이메일"
-          />
+         
           <Input_PW
             type="password"
             value={Password}

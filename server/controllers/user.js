@@ -107,9 +107,9 @@ exports.logoutUser = async (req, res, next) => {
   };
 
 //닉네임 중복 체크
-exports.checkName = async (req, res) => {
+exports.checkEmail = async (req, res) => {
   try {
-    const user = await User.findOne({ name: req.body.name });
+    const user = await User.findOne({ email: req.body.email });
     if (!user) {
       return res.json({ success: true });
     } else {

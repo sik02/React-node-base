@@ -5,7 +5,7 @@ const {
   loginUser,
   checkAuth,
   logoutUser,
-  checkName,
+  checkEmail,
   updateUser,
 } = require('../controllers/user');
 
@@ -20,7 +20,7 @@ router.get('/users/auth', auth, checkAuth);
 //로그아웃
 router.get('/users/logout', auth, logoutUser);
 //이름체크
-router.post('/users/checkName', checkName);
+router.post('/users/checkEmail', checkEmail);
 //업데이트
 router.post('/users/updateUser', auth, updateUser);
 

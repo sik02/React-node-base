@@ -4,7 +4,7 @@ import {
   REGISTER_USER,
   AUTH_USER,
   LOGOUT_USER,
-  CHECK_NAME,
+  CHECK_EMAIL,
   UPDATE_USER,
 } from './types';
 
@@ -50,13 +50,13 @@ export function logout() {
   };
 }
 
-export function checkName(name) {
+export function checkEmail(email) {
   const request = axios
-    .post('/api/users/checkName', name)
+    .post('/api/users/checkEmail', email)
     .then((res) => res.data);
 
   return {
-    type: CHECK_NAME,
+    type: CHECK_EMAIL,
     payload: request,
   };
 }
