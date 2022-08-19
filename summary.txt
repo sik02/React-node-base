@@ -1,0 +1,5 @@
+justifycontent space-between 요소들 사이에 동일한 간격으로 설정
+styled(Link) react-router-dom의 Link의 모든 속성을 inherit하면서 새로운 속성 추가 가능
+react-scroll 라이브러리 사용해서 스크롤시 자연스러운 이동을 만듬
+transform: translate(-100%, 60%); x축으로 -100%, y축으로 60%
+outline: none; border와 비슷하지만 border 바깥쪽의 테두리를 지칭함
