@@ -7,6 +7,7 @@ import { logout } from "../../../_actions/user_action";
 import styled from 'styled-components';
 import SideBar from '../SideBar/SideBar';
 import NavBar from '../NavBar/NavBar';
+import HeroSection from '../HeroSection/HeroSection';
 
 function LandingPage() {
 
@@ -32,6 +33,7 @@ function LandingPage() {
     <>
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
+      <HeroSection />
     </>
     
     // <div>

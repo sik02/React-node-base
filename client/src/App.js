@@ -8,7 +8,6 @@ import SideBar from "./components/views/SideBar/SideBar";
 function App() {
   return (
     <div>
-      
       <Routes>
         {/* <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/login" element={<LoginPage />} />
