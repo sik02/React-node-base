@@ -3,3 +3,8 @@ styled(Link) react-router-dom의 Link의 모든 속성을 inherit하면서 새�
 react-scroll 라이브러리 사용해서 스크롤시 자연스러운 이동을 만듬
 transform: translate(-100%, 60%); x축으로 -100%, y축으로 60%
 outline: none; border와 비슷하지만 border 바깥쪽의 테두리를 지칭함
+aside태그 본문 옆에 따로 정보를 추가함
+
+사이즈 em과 rem
+em은 사용한 해당 요소의 font-size에 비례하고
+rem은 최상위 요소의 font-size에 비례함

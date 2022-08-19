@@ -65,7 +65,7 @@ const RightContainer = styled.div`
 `
 
 
-function Navber() {
+const Navber = ({ toggle }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [Login, setLogin] = useState(true);
@@ -105,8 +105,8 @@ function Navber() {
             {CheckLogin()}
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'>ABC</NavLogo>
-                    <MobileIcon>
+                    <NavLogo to='/'>Logo</NavLogo>
+                    <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
@@ -114,10 +114,13 @@ function Navber() {
                             <NavLinks to="about">About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="discover">Discover</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="services">Services</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="signup">Sign up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>

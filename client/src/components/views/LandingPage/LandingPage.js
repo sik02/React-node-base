@@ -5,8 +5,16 @@ import Auth from '../../../hoc/auth';
 import { useDispatch } from 'react-redux';
 import { logout } from "../../../_actions/user_action";
 import styled from 'styled-components';
+import SideBar from '../SideBar/SideBar';
+import NavBar from '../NavBar/NavBar';
 
 function LandingPage() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const logOut = () => {
@@ -21,10 +29,15 @@ function LandingPage() {
   };
 
   return (
-    <div>
-      LandingPage
-      <button onClick={logOut}>로그아웃</button>
-    </div>
+    <>
+      <SideBar isOpen={isOpen} toggle={toggle} />
+      <NavBar toggle={toggle} />
+    </>
+    
+    // <div>
+    //   LandingPage
+    //   <button onClick={logOut}>로그아웃</button>
+    // </div>
   );
 }
 
