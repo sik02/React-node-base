@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import SideBar from '../SideBar/SideBar';
 import NavBar from '../NavBar/NavBar';
 import HeroSection from '../HeroSection/HeroSection';
+import InfoSection from '../InfoSection/InfoSection';
+import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from '../InfoSection/Data';
 
 function LandingPage() {
 
@@ -34,6 +36,10 @@ function LandingPage() {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <HeroSection />
+      <InfoSection {...homeObjOne}/>
+      <InfoSection {...homeObjTwo}/>
+      <InfoSection {...homeObjThree}/>
+      <InfoSection {...homeObjFour}/>
     </>
     
     // <div>
