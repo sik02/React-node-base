@@ -13,7 +13,6 @@ import {
     ImgWrap,
     Img,
 } from './InfoElement'
-import {ReactComponent as svgs } from '../../../image/1.svg';
 import { Button } from '../Element/ButtonElements';
 import svgImg from '../../../image/3.svg';
 
