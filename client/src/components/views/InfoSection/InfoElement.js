@@ -25,7 +25,7 @@ export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1` : `'col1 col2'`)};
+    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px){
         grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1 col2'` : `'col1 col1' 'col2 col2'`)};
@@ -92,7 +92,7 @@ export const ImgWrap = styled.div`
 `
 
 export const Img = styled.img`
-    width: 100%;
+    width: 300px;
     margin: 0 0 10px 0;
     padding-right: 0;
     

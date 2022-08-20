@@ -15,9 +15,9 @@ import {
 } from './InfoElement'
 import {ReactComponent as svgs } from '../../../image/1.svg';
 import { Button } from '../Element/ButtonElements';
-import svgImg from '../../../image/2.svg';
+import svgImg from '../../../image/3.svg';
 
-const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, alt, primary, dark, dark2}) => {
   return (
     <>
         <InfoContainer lightBg={lightBg} id={id}>
@@ -44,7 +44,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkT
                     </Column1>
                     <Column2>
                         <ImgWrap>
-                            <Img src={svgImg} alt={alt}/>
+                            <Img src={svgImg} alt={alt} />
                         </ImgWrap>
                     </Column2>
                 </InfoRow>

@@ -31,21 +31,21 @@ export const homeObjTwo = {
     darkText: true
 };
 
-export const homeObjThree = {
-    id: 'signup',
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topLine: 'Join our team',
-    headline: 'Creating an account is extremely easy',
-    description: 'Get everything set up and ready in under 10 minutes. All you need to do is add your information and you are ready to go.',
-    buttonLabel: 'Start Now',
-    imgStart: false,
-    alt: 'Paper',
-    dark: true,
-    primary: true,
-    darkText: false
-};
+// export const homeObjThree = {
+//     id: 'signup',
+//     lightBg: false,
+//     lightText: true,
+//     lightTextDesc: true,
+//     topLine: 'Join our team',
+//     headline: 'Creating an account is extremely easy',
+//     description: 'Get everything set up and ready in under 10 minutes. All you need to do is add your information and you are ready to go.',
+//     buttonLabel: 'Start Now',
+//     imgStart: false,
+//     alt: 'Paper',
+//     dark: true,
+//     primary: true,
+//     darkText: false
+// };
 
 export const homeObjFour = {
     id: 'discover',

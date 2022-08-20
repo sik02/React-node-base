@@ -9,6 +9,7 @@ import SideBar from '../SideBar/SideBar';
 import NavBar from '../NavBar/NavBar';
 import HeroSection from '../HeroSection/HeroSection';
 import InfoSection from '../InfoSection/InfoSection';
+import Services from '../Sevices/Services';
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from '../InfoSection/Data';
 
 function LandingPage() {
@@ -18,18 +19,18 @@ function LandingPage() {
     setIsOpen(!isOpen)
   }
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const logOut = () => {
-    dispatch(logout()).then((res) => {
-      if (res.payload.isAuth === false) {
-        alert("이미 로그아웃 상태입니다.!");
-      } else {
-        alert("로그아웃 성공");
-        navigate("/");
-      }
-    });
-  };
+  // const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const logOut = () => {
+  //   dispatch(logout()).then((res) => {
+  //     if (res.payload.isAuth === false) {
+  //       alert("이미 로그아웃 상태입니다.!");
+  //     } else {
+  //       alert("로그아웃 성공");
+  //       navigate("/");
+  //     }
+  //   });
+  // };
 
   return (
     <>
@@ -38,7 +39,7 @@ function LandingPage() {
       <HeroSection />
       <InfoSection {...homeObjOne}/>
       <InfoSection {...homeObjTwo}/>
-      <InfoSection {...homeObjThree}/>
+      <Services />
       <InfoSection {...homeObjFour}/>
     </>
     
