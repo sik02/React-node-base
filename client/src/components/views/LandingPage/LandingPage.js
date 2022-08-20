@@ -10,6 +10,7 @@ import SideBar from '../SideBar/SideBar';
 import HeroSection from '../HeroSection/HeroSection';
 import InfoSection from '../InfoSection/InfoSection';
 import Services from '../Sevices/Services';
+import Footer from '../Footer/Footer';
 import { homeObjOne, homeObjTwo, homeObjThree } from '../InfoSection/Data';
 
 function LandingPage() {
@@ -40,6 +41,7 @@ function LandingPage() {
       <InfoSection {...homeObjTwo}/>
       <Services />
       <InfoSection {...homeObjThree}/>
+      <Footer />
     </>
     
     // <div>
