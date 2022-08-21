@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import styled from "styled-components";
 import { logout, auth } from "../../../_actions/user_action";
 import { FaBars } from "react-icons/fa"
 import {
@@ -16,56 +15,8 @@ import {
     NavBtnLink,
 } from "./NavBarElement";
 import { IconContext} from 'react-icons/lib';
-
 import { animateScroll as scroll } from 'react-scroll';
 
-const HeaderContainer = styled.div`
-  display: flex;
-  flex-direction: low;
-  justify-content: center;
-  align-items: center;
-  height: 81px;
-  background-color: skyblue;
-`
-
-const HeaderLogo = styled.button`
-  display: flex;
-  justify-content: flex-start;
-  color: black;
-  background-color: transparent;
-  border: none;
-  font-size: 30px;
-  margin: 15px 5px;
-  margin-left: 50px;
-  cursor: pointer;
-  text-shadow: 1px 1px 1px #000;
-`
-const CenterContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`
-
-const NavButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: transparent;
-  border: none;
-  width: 80px;
-  height: 50px;
-  font-size: 17px;
-  font-weight : 700;
-  margin-left: 15px;
-  cursor: pointer;
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-left: auto;
-  margin-right: 50px;
-`
 
 
 const Navber = ({ toggle }) => {
@@ -122,7 +73,7 @@ const Navber = ({ toggle }) => {
 
     return (
         <>
-            {CheckLogin()}
+            {/* {CheckLogin()} */}
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavbarContainer>
@@ -175,30 +126,10 @@ const Navber = ({ toggle }) => {
                         <NavBtn>
                             <NavBtnLink to="/login">Sign In</NavBtnLink>
                         </NavBtn>
+                        
                     </NavbarContainer>
                 </Nav>
             </IconContext.Provider>
-            {/* <HeaderContainer>
-                <HeaderLogo onClick={onLogoClick}>
-                    Logo
-                </HeaderLogo>
-                <CenterContainer>
-                    <NavButton>Nav</NavButton>
-                    <NavButton>Nav</NavButton>
-                </CenterContainer>
-                <RightContainer>
-                    {
-                        Login
-                        ?
-                        <NavButton onClick={onLogoutClick}>Logout</NavButton>
-                        :
-                        <>
-                            <NavButton onClick={onLoginClick}>Login</NavButton>
-                            <NavButton onClick={onRegisterClick}>Register</NavButton>
-                        </>
-                    }
-                </RightContainer>
-            </HeaderContainer> */}
         </>
 
     )
